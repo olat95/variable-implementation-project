@@ -2,7 +2,6 @@
 
 variable "region" {
   description = "The region in which the resources are located"
-  default     = "eu-west-2"
   type        = string
 }
 
