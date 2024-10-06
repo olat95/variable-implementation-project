@@ -61,3 +61,24 @@ variable "ssh_location" {
   description = "IP address to allow ssh access"
   type        = string
 }
+
+# RDS variables
+variable "database_snapshot_identifier" {
+  description = "database snapshot name"
+  type        = string
+}
+
+variable "database_instance_class" {
+  description = "database instance type"
+  type        = string
+}
+
+variable "database_instance_identifier" {
+  description = "database instance identifier"
+  type        = string
+}
+
+variable "multi_az" {
+  description = "multi availability zone"
+  type        = bool
+}
