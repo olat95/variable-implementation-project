@@ -82,3 +82,50 @@ variable "multi_az" {
   description = "multi availability zone"
   type        = bool
 }
+
+# ALB variables
+variable "ssl_certificate_arn" {
+  description = "SSL certificate ARN"
+  type        = string
+}
+
+# ASG variables
+variable "launch_template_name" {
+  description = "launch template name"
+  type        = string
+  default     = "webserver-launch-template"
+}
+
+variable "ec2_image_id" {
+  description = "AMI ID"
+  type        = string
+}
+
+variable "ec2_instance_type" {
+  description = "EC2 instance type"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "ec2_key_name" {
+  description = "EC2 key pair name"
+  type        = string
+}
+
+# SNS variables
+variable "email_address_for_sns" {
+  description = "email address for SNS"
+  type        = string
+}
+
+# Route53 variables
+variable "domain_name" {
+  description = "domain name"
+  type        = string
+}
+
+variable "record_name" {
+  description = "subdomain name"
+  type        = string
+  default     = "www"
+}
